@@ -21,4 +21,4 @@ add_library(
 )
 
 target_include_directories(widgetz PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../include")
-target_link_libraries(widgetz PRIVATE allegro5)
+target_link_libraries(widgetz PRIVATE allegro5 freetype)
