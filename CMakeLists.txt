@@ -4,7 +4,11 @@ project(WIDGETZ C)
 set(CMAKE_C_STANDARD 11)
 set(VCPKG_FEATURE_FLAGS "registries")
 
-find_package(unofficial-allegro5 REQUIRED)
+include(FindPkgConfig)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMake/Modules")
+find_package(Allegro REQUIRED)
+find_package(Freetype REQUIRED)
+find_package(Allegro REQUIRED)
 find_package(Freetype REQUIRED)
 
 add_subdirectory(src)
