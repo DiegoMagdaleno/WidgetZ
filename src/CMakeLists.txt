@@ -23,3 +23,6 @@ add_library(
 
 target_include_directories(widgetz PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../include")
 target_link_libraries(widgetz PRIVATE unofficial-allegro5 freetype)
+
+install(TARGETS widgetz DESTINATION lib)
+install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../include" DESTINATION include)
