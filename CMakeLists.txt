@@ -14,3 +14,7 @@ add_subdirectory(src)
 include_directories(
 	${WIDGETZ_SOURCE_DIR}/include
 )
+
+if(MSVC)
+    set(EXECUTABLE_TYPE "WIN32")
+endif(MSVC)
