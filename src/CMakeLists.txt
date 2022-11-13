@@ -17,6 +17,7 @@ list(APPEND source_code
 
 add_library(
     widgetz
+    SHARED
     ${source_code}
 )
 
