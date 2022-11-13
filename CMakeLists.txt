@@ -18,3 +18,7 @@ include_directories(
 if(MSVC)
     set(EXECUTABLE_TYPE "WIN32")
 endif(MSVC)
+
+if(BUILD_EXAMPLE)
+add_subdirectory(example)
+endif(BUILD_EXAMPLE)

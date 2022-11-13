@@ -46,6 +46,6 @@ else(WIN32)
 install(TARGETS widgetz DESTINATION lib)
 endif(WIN32)
 
-install(TARGETS widgetzStatic DESTINATION lib)
+install(TARGETS widgetzStatic DESTINATION ARCHIVE lib)
 
 install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../include" DESTINATION include)
