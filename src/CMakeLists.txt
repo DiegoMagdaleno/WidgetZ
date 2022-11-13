@@ -29,8 +29,12 @@ add_library(
 
 set_target_properties(widgetzStatic PROPERTIES OUTPUT_NAME widgetz)
 
-target_include_directories(widgetz PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../include")
 target_include_directories(widgetzStatic PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../include")
+target_include_directories(widgetzStatic PRIVATE ${ALLEGRO_INCLUDE_DIR})
+target_include_directories(widgetzStatic PRIVATE ${FREETYPE_INCLUDE_DIR})
+
+
+target_include_directories(widgetz PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../include")
 target_link_libraries(widgetz PRIVATE ${ALLEGRO_LIBRARIES})
 target_link_libraries(widgetz PRIVATE ${FREETYPE_LIBRARIES})
 target_include_directories(widgetz PRIVATE ${ALLEGRO_INCLUDE_DIR})
